@@ -1,6 +1,6 @@
 ﻿namespace PriceListGenerator
 {
-    partial class Form1
+    partial class PriceList
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DataGrid_products = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,15 +37,15 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_Save = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid_products)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DataGrid_products
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGrid_products.AllowUserToAddRows = false;
+            this.DataGrid_products.AllowUserToDeleteRows = false;
+            this.DataGrid_products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGrid_products.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Title,
             this.Price,
@@ -53,11 +53,11 @@
             this.Category,
             this.Description,
             this.Rating});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(750, 367);
-            this.dataGridView1.TabIndex = 0;
+            this.DataGrid_products.Location = new System.Drawing.Point(12, 3);
+            this.DataGrid_products.Name = "DataGrid_products";
+            this.DataGrid_products.ReadOnly = true;
+            this.DataGrid_products.Size = new System.Drawing.Size(750, 367);
+            this.DataGrid_products.TabIndex = 0;
             // 
             // Id
             // 
@@ -110,23 +110,23 @@
             this.button_Save.Text = "Save";
             this.button_Save.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // PriceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 401);
             this.Controls.Add(this.button_Save);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Controls.Add(this.DataGrid_products);
+            this.Name = "PriceList";
+            this.Text = "Price List";
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid_products)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGrid_products;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;

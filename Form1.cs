@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PriceListGenerator
 {
-    public partial class Form1 : Form
+    public partial class PriceList : Form
     {
-        public Form1()
+        public PriceList()
         {
             InitializeComponent();
         }
