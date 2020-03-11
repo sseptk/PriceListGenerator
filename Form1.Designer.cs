@@ -37,6 +37,13 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_Save = new System.Windows.Forms.Button();
+            this.checkBox_id = new System.Windows.Forms.CheckBox();
+            this.checkBox_category = new System.Windows.Forms.CheckBox();
+            this.checkBox_currency = new System.Windows.Forms.CheckBox();
+            this.checkBox_price = new System.Windows.Forms.CheckBox();
+            this.checkBox_title = new System.Windows.Forms.CheckBox();
+            this.checkBox_rating = new System.Windows.Forms.CheckBox();
+            this.checkBox_description = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_products)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,11 +117,88 @@
             this.button_Save.Text = "Save";
             this.button_Save.UseVisualStyleBackColor = true;
             // 
+            // checkBox_id
+            // 
+            this.checkBox_id.Location = new System.Drawing.Point(73, 9);
+            this.checkBox_id.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox_id.Name = "checkBox_id";
+            this.checkBox_id.Size = new System.Drawing.Size(13, 14);
+            this.checkBox_id.TabIndex = 2;
+            this.checkBox_id.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox_id.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_category
+            // 
+            this.checkBox_category.Location = new System.Drawing.Point(506, 9);
+            this.checkBox_category.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox_category.Name = "checkBox_category";
+            this.checkBox_category.Size = new System.Drawing.Size(13, 14);
+            this.checkBox_category.TabIndex = 3;
+            this.checkBox_category.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox_category.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_currency
+            // 
+            this.checkBox_currency.Location = new System.Drawing.Point(406, 9);
+            this.checkBox_currency.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox_currency.Name = "checkBox_currency";
+            this.checkBox_currency.Size = new System.Drawing.Size(13, 14);
+            this.checkBox_currency.TabIndex = 4;
+            this.checkBox_currency.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox_currency.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_price
+            // 
+            this.checkBox_price.Location = new System.Drawing.Point(287, 9);
+            this.checkBox_price.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox_price.Name = "checkBox_price";
+            this.checkBox_price.Size = new System.Drawing.Size(13, 14);
+            this.checkBox_price.TabIndex = 5;
+            this.checkBox_price.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox_price.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_title
+            // 
+            this.checkBox_title.Location = new System.Drawing.Point(186, 9);
+            this.checkBox_title.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox_title.Name = "checkBox_title";
+            this.checkBox_title.Size = new System.Drawing.Size(13, 14);
+            this.checkBox_title.TabIndex = 6;
+            this.checkBox_title.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox_title.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_rating
+            // 
+            this.checkBox_rating.Location = new System.Drawing.Point(697, 9);
+            this.checkBox_rating.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox_rating.Name = "checkBox_rating";
+            this.checkBox_rating.Size = new System.Drawing.Size(13, 14);
+            this.checkBox_rating.TabIndex = 7;
+            this.checkBox_rating.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox_rating.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_description
+            // 
+            this.checkBox_description.Location = new System.Drawing.Point(617, 9);
+            this.checkBox_description.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox_description.Name = "checkBox_description";
+            this.checkBox_description.Size = new System.Drawing.Size(13, 14);
+            this.checkBox_description.TabIndex = 8;
+            this.checkBox_description.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox_description.UseVisualStyleBackColor = true;
+            // 
             // PriceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 401);
+            this.Controls.Add(this.checkBox_description);
+            this.Controls.Add(this.checkBox_rating);
+            this.Controls.Add(this.checkBox_title);
+            this.Controls.Add(this.checkBox_price);
+            this.Controls.Add(this.checkBox_currency);
+            this.Controls.Add(this.checkBox_category);
+            this.Controls.Add(this.checkBox_id);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.DataGrid_products);
             this.Name = "PriceList";
@@ -135,6 +219,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rating;
         private System.Windows.Forms.Button button_Save;
+        private System.Windows.Forms.CheckBox checkBox_id;
+        private System.Windows.Forms.CheckBox checkBox_category;
+        private System.Windows.Forms.CheckBox checkBox_currency;
+        private System.Windows.Forms.CheckBox checkBox_price;
+        private System.Windows.Forms.CheckBox checkBox_title;
+        private System.Windows.Forms.CheckBox checkBox_rating;
+        private System.Windows.Forms.CheckBox checkBox_description;
     }
 }
 

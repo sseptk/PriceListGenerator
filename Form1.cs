@@ -26,15 +26,15 @@ namespace PriceListGenerator
             var Products = jsonParser.DeserializeJsonObejct();
 
             int numberRow = 0;
-            foreach (var v in Products)
+            foreach (var product in Products)
             {
                 DataGrid_products.Rows.Add();
-                DataGrid_products.Rows[numberRow].Cells["id"].Value = v.id;
-                DataGrid_products.Rows[numberRow].Cells["title"].Value = v.title;
-                DataGrid_products.Rows[numberRow].Cells["price"].Value = v.price;
-                DataGrid_products.Rows[numberRow].Cells["currency"].Value = v.currency;
-                DataGrid_products.Rows[numberRow].Cells["description"].Value = v.description;
-                DataGrid_products.Rows[numberRow].Cells["rating"].Value = v.rating;
+                DataGrid_products.Rows[numberRow].Cells["id"].Value = product.id;
+                DataGrid_products.Rows[numberRow].Cells["title"].Value = product.title;
+                DataGrid_products.Rows[numberRow].Cells["price"].Value = product.price;
+                DataGrid_products.Rows[numberRow].Cells["currency"].Value = product.currency;
+                DataGrid_products.Rows[numberRow].Cells["description"].Value = product.description;
+                DataGrid_products.Rows[numberRow].Cells["rating"].Value = product.rating;
                 ++numberRow;
             }
         }
