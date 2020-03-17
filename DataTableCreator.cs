@@ -11,21 +11,24 @@ namespace PriceListGenerator
 {
     class DataTableCreator
     {
-        DataTable table_Products = new DataTable("Products");
+        private DataTable table_Products = new DataTable("Products");
 
         public void CreateTableForSave(string nameColumn, DataGridView dataGridView, ColumnNames column)
         {
             table_Products.Columns.Add(dataGridView.Columns[nameColumn].Name);
 
             int rowCount = 0;
-            foreach(DataGridViewRow row in dataGridView.Rows)
+            foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                if(table_Products.Rows.Count != dataGridView.Rows.Count)
+                if (table_Products.Rows.Count != dataGridView.Rows.Count)
                     table_Products.Rows.Add();
-                
-                table_Products.Rows[rowCount][(int)column]= row.Cells[(int)column].Value;
+
+                table_Products.Rows[rowCount][(int)column] = row.Cells[(int)column].Value;
                 rowCount++;
             }
         }
+
+        public DataTable getTable()
+            => table_Products;
     }
 }
