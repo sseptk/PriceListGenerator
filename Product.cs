@@ -12,6 +12,7 @@ namespace PriceListGenerator
         public string title{ get; set; }
         public int price { get; set; }
         public string currency { get; set; }
+        public string category { get; set; }
         public string description { get; set; }
         public int rating { get; set; }
     }

@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.DataGrid_products = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Currency = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_Save = new System.Windows.Forms.Button();
             this.checkBox_id = new System.Windows.Forms.CheckBox();
             this.checkBox_category = new System.Windows.Forms.CheckBox();
@@ -44,6 +37,13 @@
             this.checkBox_title = new System.Windows.Forms.CheckBox();
             this.checkBox_rating = new System.Windows.Forms.CheckBox();
             this.checkBox_description = new System.Windows.Forms.CheckBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Currency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_products)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,50 +63,8 @@
             this.DataGrid_products.Location = new System.Drawing.Point(12, 3);
             this.DataGrid_products.Name = "DataGrid_products";
             this.DataGrid_products.ReadOnly = true;
-            this.DataGrid_products.Size = new System.Drawing.Size(750, 367);
+            this.DataGrid_products.Size = new System.Drawing.Size(767, 367);
             this.DataGrid_products.TabIndex = 0;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Title
-            // 
-            this.Title.HeaderText = "Title";
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Currency
-            // 
-            this.Currency.HeaderText = "Currency";
-            this.Currency.Name = "Currency";
-            this.Currency.ReadOnly = true;
-            // 
-            // Category
-            // 
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            // 
-            // Rating
-            // 
-            this.Rating.HeaderText = "Rating";
-            this.Rating.Name = "Rating";
-            this.Rating.ReadOnly = true;
             // 
             // button_Save
             // 
@@ -116,6 +74,7 @@
             this.button_Save.TabIndex = 1;
             this.button_Save.Text = "Save";
             this.button_Save.UseVisualStyleBackColor = true;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
             // checkBox_id
             // 
@@ -187,11 +146,53 @@
             this.checkBox_description.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.checkBox_description.UseVisualStyleBackColor = true;
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Title
+            // 
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Currency
+            // 
+            this.Currency.HeaderText = "Currency";
+            this.Currency.Name = "Currency";
+            this.Currency.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            // 
+            // Rating
+            // 
+            this.Rating.HeaderText = "Rating";
+            this.Rating.Name = "Rating";
+            this.Rating.ReadOnly = true;
+            // 
             // PriceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 401);
+            this.ClientSize = new System.Drawing.Size(782, 401);
             this.Controls.Add(this.checkBox_description);
             this.Controls.Add(this.checkBox_rating);
             this.Controls.Add(this.checkBox_title);
@@ -201,6 +202,8 @@
             this.Controls.Add(this.checkBox_id);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.DataGrid_products);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "PriceList";
             this.Text = "Price List";
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_products)).EndInit();
@@ -211,13 +214,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DataGrid_products;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Currency;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rating;
         private System.Windows.Forms.Button button_Save;
         private System.Windows.Forms.CheckBox checkBox_id;
         private System.Windows.Forms.CheckBox checkBox_category;
@@ -226,6 +222,13 @@
         private System.Windows.Forms.CheckBox checkBox_title;
         private System.Windows.Forms.CheckBox checkBox_rating;
         private System.Windows.Forms.CheckBox checkBox_description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Currency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rating;
     }
 }
 
