@@ -46,11 +46,18 @@ namespace PriceListGenerator
 
         private void button_Save_Click(object sender, EventArgs e)
         {
+            DataTableCreator dataTableCreator = GenerateTable();
+
+            SaveTable(dataTableCreator);
+        }
+
+        private DataTableCreator GenerateTable()
+        {
             DataTableCreator dataTableCreator = new DataTableCreator();
- 
+
             if (checkBox_id.Checked)
             {
-                dataTableCreator.CreateTableForSave("id", DataGrid_products, ColumnNames.id); 
+                dataTableCreator.CreateTableForSave("id", DataGrid_products, ColumnNames.id);
             }
 
             if (checkBox_title.Checked)
@@ -76,6 +83,26 @@ namespace PriceListGenerator
             if (checkBox_rating.Checked)
             {
                 dataTableCreator.CreateTableForSave("rating", DataGrid_products, ColumnNames.rating);
+            }
+
+            return dataTableCreator;
+        }
+
+        private void SaveTable(DataTableCreator dataTableCreator)
+        {
+            DataTableSave dataTableSave = new DataTableSave(dataTableCreator.getTable());
+
+            if (comboBox_formats.SelectedItem.ToString() == "xml")
+            {
+                dataTableSave.SaveAsXml();
+            }
+            if (comboBox_formats.SelectedItem.ToString() == "xlsx")
+            {
+                dataTableSave.SaveAsXlsx();
+            }
+            if (comboBox_formats.SelectedItem.ToString() == "csv")
+            {
+                dataTableSave.SaveAsCsv();
             }
         }
     }
