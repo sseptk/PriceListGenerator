@@ -12,6 +12,7 @@ namespace PriceListGenerator
     public class DataTableSave
     {
         DataTable table_Products = new DataTable();
+
         public DataTableSave(DataTable dataTable)
         {
             table_Products = dataTable;
@@ -48,8 +49,7 @@ namespace PriceListGenerator
             using(StreamWriter sw = new StreamWriter("Products.csv"))
             {
                 sw.WriteLine(csvTable.ToString());
-            }
-           
+            }   
         }
     }
 }

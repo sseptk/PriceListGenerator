@@ -25,7 +25,6 @@ namespace PriceListGenerator
         private void fillingTheGridWithData()
         {
             JsonParser jsonParser = new JsonParser();
-
             var Products = jsonParser.DeserializeJsonObejct();
 
             int numberRow = 0;
@@ -44,66 +43,66 @@ namespace PriceListGenerator
 
         }
 
-        private void button_Save_Click(object sender, EventArgs e)
-        {
-            DataTableCreator dataTableCreator = GenerateTable();
-
-            SaveTable(dataTableCreator);
-        }
-
         private DataTableCreator GenerateTable()
         {
             DataTableCreator dataTableCreator = new DataTableCreator();
 
             if (checkBox_id.Checked)
-            {
                 dataTableCreator.CreateTableForSave("id", DataGrid_products, ColumnNames.id);
-            }
 
             if (checkBox_title.Checked)
-            {
                 dataTableCreator.CreateTableForSave("title", DataGrid_products, ColumnNames.title);
-            }
+
             if (checkBox_price.Checked)
-            {
                 dataTableCreator.CreateTableForSave("price", DataGrid_products, ColumnNames.price);
-            }
+
             if (checkBox_currency.Checked)
-            {
                 dataTableCreator.CreateTableForSave("currency", DataGrid_products, ColumnNames.currency);
-            }
+
             if (checkBox_category.Checked)
-            {
                 dataTableCreator.CreateTableForSave("category", DataGrid_products, ColumnNames.category);
-            }
+
             if (checkBox_description.Checked)
-            {
                 dataTableCreator.CreateTableForSave("description", DataGrid_products, ColumnNames.description);
-            }
+
             if (checkBox_rating.Checked)
-            {
                 dataTableCreator.CreateTableForSave("rating", DataGrid_products, ColumnNames.rating);
-            }
+
 
             return dataTableCreator;
         }
 
         private void SaveTable(DataTableCreator dataTableCreator)
         {
+            if(comboBox_formats.SelectedItem == null)
+            {
+                MessageBox.Show("Choose save format !");
+                return;
+            }
+
             DataTableSave dataTableSave = new DataTableSave(dataTableCreator.getTable());
 
-            if (comboBox_formats.SelectedItem.ToString() == "xml")
-            {
+            string format = comboBox_formats.SelectedItem.ToString();                 
+
+            if (format == "xml")  
                 dataTableSave.SaveAsXml();
-            }
-            if (comboBox_formats.SelectedItem.ToString() == "xlsx")
-            {
+
+            if (format == "xlsx")
                 dataTableSave.SaveAsXlsx();
-            }
-            if (comboBox_formats.SelectedItem.ToString() == "csv")
-            {
+
+            if (format == "csv")
                 dataTableSave.SaveAsCsv();
-            }
+        }
+
+        private void comboBox_formats_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            button_Save.Enabled = true;
+        }
+
+        private void button_Save_Click(object sender, EventArgs e)
+        {
+            DataTableCreator dataTableCreator = GenerateTable();
+            SaveTable(dataTableCreator);
         }
     }
 }

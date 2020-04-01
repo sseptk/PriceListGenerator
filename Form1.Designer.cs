@@ -111,6 +111,7 @@
             // 
             // button_Save
             // 
+            this.button_Save.Enabled = false;
             this.button_Save.Location = new System.Drawing.Point(555, 376);
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(75, 23);
@@ -200,6 +201,7 @@
             this.comboBox_formats.Name = "comboBox_formats";
             this.comboBox_formats.Size = new System.Drawing.Size(121, 21);
             this.comboBox_formats.TabIndex = 9;
+            this.comboBox_formats.SelectedIndexChanged += new System.EventHandler(this.comboBox_formats_SelectedIndexChanged);
             // 
             // PriceList
             // 

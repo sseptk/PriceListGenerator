@@ -19,9 +19,7 @@ namespace PriceListGenerator
         {
             jsonString = jsonFile.GetJsonString();
 
-            var Products = JsonConvert.DeserializeObject<List<Product>>(jsonString);
-
-            return Products;
+           return JsonConvert.DeserializeObject<List<Product>>(jsonString);
         }
     }
 }
